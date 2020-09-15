@@ -102,3 +102,36 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/articles/1/edit" for 71.197.15.109 at 2020-09-15 20:05:54 +0000
+Cannot render console from 71.197.15.109! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.4ms)
+  Rendered articles/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/1" for 71.197.15.109 at 2020-09-15 20:06:09 +0000
+Cannot render console from 71.197.15.109! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H1Ocmzdpg4hD38+6vCuHDRbfacSyQEsThD/HYfqnySIUPWsngqNEVwEpum2b1lWdX8drpI55+bvOdzfRcLwymA==", "article"=>{"title"=>"I have created a scaffold", "body"=>"Never knew you could do this!  Now I edited it and added this sentence!"}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "articles" SET "body" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["body", "Never knew you could do this!  Now I edited it and added this sentence!"], ["updated_at", "2020-09-15 20:06:09.605785"], ["id", 1]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.130.239:33425/articles/1
+Completed 302 Found in 13ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/articles/1" for 71.197.15.109 at 2020-09-15 20:06:09 +0000
+Cannot render console from 71.197.15.109! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
